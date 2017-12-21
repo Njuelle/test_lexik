@@ -8,12 +8,12 @@ date_default_timezone_set('UTC');
 define('DEBUG', true);
 
 /***** DATABASE & ORM *****/
-define('NEED_ORM', false);
+define('NEED_ORM', true);
 
 const DB_CONF = (!NEED_ORM) ? false : array(
     'driver'    => "mysql",
     'host'      => "localhost",
-    'database'  => "eloquent",
+    'database'  => "lexik",
     'username'  => "root",
     'password'  => "root",
     'charset'   => "utf8",

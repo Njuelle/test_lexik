@@ -9,6 +9,4 @@
  * @var FastRoute\RouteCollector $r
  */
 
-$r->addRoute('GET', '/beers', 'BeerController::getAll');
-$r->addRoute('GET', '/beer/{id:\d+}', 'BeerController::getOne');
-$r->addRoute('GET', '/test', 'BeerController::test');
+$r->addRoute('GET', '/users', 'UserController::getAll');

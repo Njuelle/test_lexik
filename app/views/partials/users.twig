@@ -1,10 +1,10 @@
 {% extends 'global/layout.twig' %}
 
 {% block content %}
-	<h2>Get all beers :)</h2>
+	<h2>Get all users :)</h2>
     <ul class="beers-list">
-        {% for beer in beers %}
-            <li>{{ beer.name }}</li>
+        {% for user in users %}
+            <li>{{ user.prenom }}</li>
         {% endfor %}
     </ul>
 {% endblock %}
