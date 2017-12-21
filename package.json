@@ -1,0 +1,34 @@
+{
+  "name": "bombi-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/njuelle/Bombi-Framework.git"
+  },
+  "author": "n.juelle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/njuelle/Bombi-Framework/issues"
+  },
+  "homepage": "https://gitlab.com/njuelle/Bombi-Framework#README",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssbeautify": "latest",
+    "gulp-csscomb": "latest",
+    "gulp-csso": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "latest",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "gulp-plumber": "^1.1.0"
+  }
+}

@@ -1,0 +1,5 @@
+{% extends 'global/layout.twig' %}
+{% set isUser = isLoggedIn() %}
+{% block content %}
+	<h1>{{ isUser }}</h1>
+{% endblock %}
