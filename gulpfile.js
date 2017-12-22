@@ -2,7 +2,6 @@ var gulp    = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
 var onError = function (err) {
-    gutil.beep();
     console.log(err);
 };
 

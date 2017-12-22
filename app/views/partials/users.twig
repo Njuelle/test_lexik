@@ -1,10 +1,42 @@
 {% extends 'global/layout.twig' %}
 
 {% block content %}
-	<h2>Get all users :)</h2>
-    <ul class="beers-list">
-        {% for user in users %}
-            <li>{{ user.prenom }}</li>
-        {% endfor %}
-    </ul>
+    <h2>Liste des users</h2>
+    
+    <div class="form-group">
+        <a href="/user/new" class="new-user btn btn-primary">Ajouter un utilisateur</a>
+    </div>
+    
+    <table id="users-table" class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Groupe</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Email</th>
+                <th scope="col"></th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.getGroup().nom }}</td>
+                    <td>{{ user.nom }}&nbsp;{{ user.prenom }} </td>
+                    <td>{{ user.email }}</td>
+                    <td>
+                        <a href="/user/details/{{ user.id }}" class="show-detail">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
+                        &nbsp;
+                        <a href="/user/delete/{{ user.id }}" class="delete-user">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                        &nbsp;
+                        <input type="checkbox" class="check-user" data-id="{{ user.id }}">
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/user/delete/selected" class="btn delete-selected-user">Supprimer les utilisateurs sélectionné</a>
 {% endblock %}
