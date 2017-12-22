@@ -38,7 +38,7 @@ class UserController extends Abstracted\Controller
         $user->group_id   = $posts['groupe'];
 
         $user->save();
-        // header('Location: /');
+        header('Location: /');
 
     }
 

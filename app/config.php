@@ -13,7 +13,7 @@ define('NEED_ORM', true);
 const DB_CONF = (!NEED_ORM) ? false : array(
     'driver'    => "mysql",
     'host'      => "localhost",
-    'database'  => "lexik",
+    'database'  => "test_lexik",
     'username'  => "root",
     'password'  => "root",
     'charset'   => "utf8",
