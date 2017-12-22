@@ -30,7 +30,6 @@
                     <div class="form-group">
                         <label for="groupe">Groupe :</label>
                         <select name="groupe" id="groupe">
-                            <option value="0">Choisir un groupe</option>
                             {% for group in groups %}
                                 <option value="{{ group.id }}">{{ group.nom }}</option>
                             {% endfor %}   

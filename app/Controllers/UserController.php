@@ -30,16 +30,15 @@ class UserController extends Abstracted\Controller
     public function addUser()
     {
         $posts = $this->request->getParsedBody();
-        
         $user = new User();
         $user->nom        = $posts['nom'];
         $user->prenom     = $posts['prenom'];
         $user->email      = $posts['email'];
-        $user->birth_date = date("Y-m-d H:i:s");
+        $user->birth_date = $posts['birth_date'];
         $user->group_id   = $posts['groupe'];
 
         $user->save();
-        header('Location: /');
+        // header('Location: /');
 
     }
 

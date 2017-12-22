@@ -24,6 +24,10 @@ function showNewUserForm() {
 		var url = $(this).attr('href');
 
 		AjaxModal.call(url, function(){
+			$('#birth_date').datepicker({
+				locale: 'no',
+				format: 'yyyy-mm-dd'
+			});
 			$('#new-user-modal').modal('show');
 		});		
 	})	
@@ -46,11 +50,13 @@ function massDelete() {
 				$(this).data('id')
 			);
 		});
-		
+
 		if ( user_ids.length > 0 ) {
 			window.location = url + '?ids=' + user_ids.join();
 		}
-		
+	});
+}
 
-	});	
+function checkForm() {
+	$('')
 }
